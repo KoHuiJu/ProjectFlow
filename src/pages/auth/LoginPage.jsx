@@ -18,7 +18,6 @@ export default function LoginPage() {
         setError('');
         try {
             const res = await login({ email, password });
-            // LoginRes 형태에 맞춰 필요 시 수정
             setAccessToken(res?.accessToken);
             setMe(res?.user || { email });
             setTeamId(null); // 로그인하면 팀 선택부터
